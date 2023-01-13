@@ -1,0 +1,158 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<div class="container">
+    <!--Section: Contact v.2-->
+    <section class="mb-4">
+
+        <!--Section heading-->
+        <h2 class="h1-responsive font-weight-bold text-center my-4">Contactanos</h2>
+        <!--Section description-->
+        <p class="text-center w-responsive mx-auto mb-5">
+            ¿Tiene usted alguna pregunta? Por favor, no dude en contactarnos directamente. Nuestro equipo le responderá dentro de
+            Cuestión de horas para ayudarte.
+        </p>
+
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-9 mb-md-0 mb-5">
+                <form id="contact-form" action="@Url.Action("SenEmail")" method="post">
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-md-12 py-3">
+                            <div class="md-form mb-0">
+                                <label for="email" class="">Correo electronico</label>
+                                <input type="text" id="email" name="to" class="form-control">
+
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="col-md-12 py-3">
+                            <div class="md-form mb-0">
+                                <label for="subject" class="">Asunto</label>
+                                <input type="text" id="subject" name="subject" class="form-control">
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12 ">
+
+                            <div class="md-form">
+                                <label for="message">Mensaje</label>
+                                <textarea type="text" id="message" name="body" rows="2" class="form-control md-textarea"></textarea>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+                </form>
+
+                <div class="text-center text-md-left py-3">
+                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Enviar</a>
+                </div>
+                <div class="status"></div>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-md-3 text-center">
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <i class="fas fa-map-marker-alt fa-2x"></i>
+                        <p>Unnamed Road, 85057 Ingolstadt, Alemania</p>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone mt-4 fa-2x"></i>
+                        <p>800 500 102</p>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope mt-4 fa-2x"></i>
+                        <p>atencioncliente@audi.es</p>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+
+        </div>
+
+    </section>
+    <!--Section: Contact v.2-->
+
+</div>
+
+<div class="container h-100 my-5">
+    <div class="row">
+        <h1 class="text-center">¿En qué podemos ayudarte?</h1>
+    </div>
+    <div class="row">
+        <p class="text-center">En Audi siempre estamos a tu lado para cualquier consulta, solicitud o sugerencia sobre nuestros productos y servicios que puedas tener, por eso te ofrecemos múltiples formas de contacto para atenderte del mejor modo posible.</p>
+    </div>
+</div>
+
+<div class="card border-0 my-5 w-100" style="background-color: #E9EBEC;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="~/imagenes/audicontact.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8 d-flex align-items-center justify-content-center">
+            <div class="card-body align-text-bottom">
+                <h5 class="card-title text-center">
+                    Teléfono gratuito de Atención al Cliente
+                </h5>
+                <p class="card-text text-center ">
+                    Disponible todos los días del año, las 24 horas del día:
+                    800 500 102
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card my-5 border-0 w-100">
+    <div class="row g-0">
+        <div class="col-md-8 d-flex align-items-center justify-content-center">
+            <div class="card-body">
+                <h5 class="card-title text-center">Contacto vía e-mail</h5>
+                <p class="card-text text-center">Puedes escribirnos a nuestro correo electrónico: atencioncliente@audi.es</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <img src="~/imagenes/audicontact2.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+    </div>
+</div>
+<div class="card my-5 w-100 border-0" style="background-color: #E9EBEC;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1314.4516704844962!2d11.4186348796453!3d48.7837355602182!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2793259ab57df84!2zNDjCsDQ2JzYwLjAiTiAxMcKwMjUnMDQuOSJF!5e0!3m2!1ses!2ses!4v1668796217674!5m2!1ses!2ses" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="m-4"></iframe>
+        </div>
+        <div class="col-md-8 d-flex align-items-center justify-content-center">
+            <div class="card-body align-text-bottom">
+                <h3 class="card-title text-center">
+                    ¿Donde estamos?
+                </h3>
+
+                <p class="card-text text-center ">Unnamed Road, 85057 Ingolstadt, Alemania</p>
+                
+            </div>
+        </div>
+    </div>
+</div>

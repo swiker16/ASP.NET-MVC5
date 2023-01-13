@@ -1,0 +1,86 @@
+﻿@model Audi.Models.serie7
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="container mt-4">
+    <h2>Crear registro para modelo 7</h2>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <label class="control-label col-md-2">ID de Coche</label>
+
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.id_coche, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.id_coche, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label class="control-label col-md-2">Nombre</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label class="control-label col-md-2">Modelo</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.modelo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.modelo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label class="control-label col-md-2">CV</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.cv, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.cv, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label class="control-label col-md-2">Consumo</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.consumo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.consumo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label class="control-label col-md-2">Imagen</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.imagen, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    </div>
+
+                    @Html.ValidationMessageFor(model => model.imagen, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group my-4">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-primary border" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="mb-3">
+        @Html.ActionLink("Volver a la lista", "Index", new { area = "" }, new { @class = "btn btn-light border border-dark" })
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

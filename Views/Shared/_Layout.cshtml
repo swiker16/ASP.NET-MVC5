@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>@ViewBag.Title - ES</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <script type="text/javascript" src="~/Scripts/menu.js"></script>
+    <script async src="~/Scripts/cookie.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-fixed-top bg-light">
+        <div class="container">
+            <a href="@Url.Action("Index", "Home")" class="px-4"><img src="~/imagenes/audi.png" width="40" height="40" /></a>
+            <button onclick="ocultar()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown" style="display: none;">
+                <ul class="navbar-nav">
+                    <li>@Html.ActionLink("Modelo 3", "Index", "serie3", new { area = "" }, new { @class = "nav-link active px-2" })</li>
+                    <li>@Html.ActionLink("Modelo 5", "Index", "serie5", new { area = "" }, new { @class = "nav-link active px-2" })</li>
+                    <li>@Html.ActionLink("Modelo 7", "Index", "serie7", new { area = "" }, new { @class = "nav-link active px-2" })</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </nav>
+
+
+    @RenderBody()
+
+
+
+<footer style="background-color: #c6c6c6;">
+    <!-- Cookie Banner -->
+    <div id="cb-cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
+        &#x1F36A; This website uses cookies to ensure you get the best experience on our website.
+        <a href="https://www.cookiesandyou.com/" target="blank">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="window.cb_hideCookieBanner()">
+            I Got It
+        </button>
+    </div>
+
+    <!-- End of Cookie Banner -->
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4">
+                <h5 class="mb-3" style="letter-spacing: 2px;">Sobre nosotros</h5>
+                <p>
+                    Audi AG, comúnmente conocido como Audi , es un fabricante de automóviles
+                    alemán de vehículos de lujo con sede en Ingolstadt , Baviera , Alemania. Como subsidiaria de su empresa matriz,
+                    el Grupo Volkswagen , Audi produce vehículos en nueve plantas de producción en todo el mundo.
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="mb-3" style="letter-spacing: 2px;">links</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home", new { area = "" }, new { @class = "nav-link active" })</li>
+                    <li>@Html.ActionLink("Políticas de privacidad", "politicas", "Home", new { area = "" }, new { @class = "nav-link active" })</li>
+                    <li>@Html.ActionLink("Politicas de Cookies", "Politicas", "Home", new { area = "" }, new { @class = "nav-link active" })</li>
+
+
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="mb-1" style="letter-spacing: 2px;">Horarios</h5>
+                <table class="table" border-color: #666;">
+                    <tbody>
+                        <tr>
+                            <td>Lunes - Viernes</td>
+                            <td>8:00 - 21:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sabados - Domingos</td>
+                            <td>8:00 - 13:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-3" style="background-color: #6f6f6f;">
+        <p style="color:#ffffff;">&copy; @DateTime.Now.Year - Audi</p>
+        <h6 class="text-uppercase mb-4 font-weight-bold" style="color:#ffffff;">Sigenos</h6>
+
+        <!-- Facebook -->
+        <a class="btn btn-primary btn-floating m-1"
+           style="background-color: #3b5998"
+           href="https://www.facebook.com/audiofficial"
+           role="button">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- Twitter -->
+        <a class="btn btn-primary btn-floating m-1"
+           style="background-color: #55acee"
+           href="https://twitter.com/AudiOfficial"
+           role="button">
+            <i class="fab fa-twitter"></i>
+        </a>
+
+
+        <!-- Instagram -->
+        <a class="btn btn-primary btn-floating m-1"
+           style="background-color: #ac2bac"
+           href="https://www.instagram.com/audispain/"
+           role="button">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+    </div>
+    </div>
+    <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+</footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

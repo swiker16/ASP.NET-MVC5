@@ -1,0 +1,49 @@
+﻿@using Audi.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Iniciar sesión";
+}
+<section class="vh-50" id="loginForm">
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="container py-5 h-100">
+            <div class="row d-flex align-items-center justify-content-center h-100">
+                <div class="col-md-8 col-lg-7 col-xl-6">
+                    <img src="~/imagenes/audi.png" class="img-fluid" alt="Phone image" />
+                </div>
+                <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                    <h1>Iniciar Sesión</h1>
+                    <form>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label d-inline" })
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control d-inline" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger d-inline" })
+
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <!-- Submit button -->
+
+                        <button type="submit"
+                                class="btn btn-primary">
+                            Iniciar sesion
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+    </section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

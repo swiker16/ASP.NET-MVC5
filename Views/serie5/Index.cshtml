@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Audi.Models.serie5>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+
+    <h2 class="py-2">Listado de coches del Modelo 5</h2>
+
+    <p>@Html.ActionLink("Crear nuevo registro", "Create", new { area = "" }, new { @class = "btn btn-light border border-dark" })</p>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Modelo
+            </th>
+            <th>
+                CV
+            </th>
+            <th>
+                Consumo
+            </th>
+            <th>
+                Imagen
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id_coche)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.modelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.consumo)
+                </td>
+                <td>
+                    @* @Html.DisplayFor(modelItem => item.imagen)*@
+                    <img width="150px" src="@Url.Action("getImage","serie5", new { id= item.id_coche})" />
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.id_coche }, new { @class = "btn btn-primary border border-dark" }) 
+                    @Html.ActionLink("Detalles", "Details", new { id = item.id_coche }, new { @class = "btn btn-primary border border-dark" }) 
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.id_coche }, new { @class = "btn btn-primary border border-dark" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

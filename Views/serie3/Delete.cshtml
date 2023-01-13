@@ -1,0 +1,65 @@
+﻿@model Audi.Models.serie3
+
+@{
+    ViewBag.Title = "Delete";
+}
+<div class="container">
+    <h2 class="py-3">Eliminar registro del modelo 3</h2>
+    <h4>Registro @Html.DisplayFor(model => model.id_coche)</h4>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.nombre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.nombre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.modelo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.modelo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.cv)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.cv)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.consumo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.consumo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.imagen)
+            </dt>
+
+            <dd>
+                @* @Html.DisplayFor(modelItem => item.imagen)*@
+                <img width="150px" src="@Url.Action("getImage","serie3", new { id= Model.id_coche})" />
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color py-3">
+                <input type="submit" value="Delete" class="btn btn-danger border border-dark" /> 
+                @Html.ActionLink("Volver a la lista", "Index", new { area = "" }, new { @class = "btn btn-light border border-dark" })
+            </div>
+        }
+    </div>
+</div>

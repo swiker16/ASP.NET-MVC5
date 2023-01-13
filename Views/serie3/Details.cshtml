@@ -1,0 +1,60 @@
+﻿@model Audi.Models.serie3
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container">
+    <h2>Detalles del modelo 3</h2>
+
+    <div>
+        <h4>Registro @Html.DisplayFor(model => model.id_coche)</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+               Nombre
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.nombre)
+            </dd>
+
+            <dt>
+                Modelo
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.modelo)
+            </dd>
+
+            <dt>
+                CV
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.cv)
+            </dd>
+
+            <dt>
+                Consumo
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.consumo)
+            </dd>
+
+            <dt>
+               Imagen
+            </dt>
+
+            <dd>
+                @* @Html.DisplayFor(modelItem => item.imagen)*@
+                <img width="150px" src="@Url.Action("getImage","serie3", new { id= Model.id_coche})" />
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.id_coche }, new { @class = "btn btn-primary border border-dark" }) 
+        @Html.ActionLink("Volver a la lista", "Index", new { area = "" }, new { @class = "btn btn-light border border-dark" })
+    </p>
+</div>
