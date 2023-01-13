@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="audiDeportivoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="serie3">
+    <Key>
+      <PropertyRef Name="id_coche" />
+    </Key>
+    <Property Name="id_coche" Type="smallint" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="modelo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="cv" Type="smallint" Nullable="false" />
+    <Property Name="consumo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="imagen" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="serie5">
+    <Key>
+      <PropertyRef Name="id_coche" />
+    </Key>
+    <Property Name="id_coche" Type="smallint" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="modelo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="cv" Type="smallint" Nullable="false" />
+    <Property Name="consumo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="imagen" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="serie7">
+    <Key>
+      <PropertyRef Name="id_coche" />
+    </Key>
+    <Property Name="id_coche" Type="smallint" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="modelo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="cv" Type="smallint" Nullable="false" />
+    <Property Name="consumo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="imagen" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="smallint" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="apellido" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="tipoUsuario" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pass" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="audiDeportivoModelStoreContainer">
+    <EntitySet Name="serie3" EntityType="Self.serie3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="serie5" EntityType="Self.serie5" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="serie7" EntityType="Self.serie7" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

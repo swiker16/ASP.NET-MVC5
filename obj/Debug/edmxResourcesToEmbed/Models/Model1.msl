@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="audiDeportivoModelStoreContainer" CdmEntityContainer="audiDeportivoEntities1">
+    <EntitySetMapping Name="serie3">
+      <EntityTypeMapping TypeName="audiDeportivoModel.serie3">
+        <MappingFragment StoreEntitySet="serie3">
+          <ScalarProperty Name="id_coche" ColumnName="id_coche" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="cv" ColumnName="cv" />
+          <ScalarProperty Name="consumo" ColumnName="consumo" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="serie5">
+      <EntityTypeMapping TypeName="audiDeportivoModel.serie5">
+        <MappingFragment StoreEntitySet="serie5">
+          <ScalarProperty Name="id_coche" ColumnName="id_coche" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="cv" ColumnName="cv" />
+          <ScalarProperty Name="consumo" ColumnName="consumo" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="serie7">
+      <EntityTypeMapping TypeName="audiDeportivoModel.serie7">
+        <MappingFragment StoreEntitySet="serie7">
+          <ScalarProperty Name="id_coche" ColumnName="id_coche" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="cv" ColumnName="cv" />
+          <ScalarProperty Name="consumo" ColumnName="consumo" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="audiDeportivoModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="tipoUsuario" ColumnName="tipoUsuario" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
